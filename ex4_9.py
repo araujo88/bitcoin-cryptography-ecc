@@ -1,7 +1,7 @@
 from ecc import PrivateKey
 from helper import hash256, little_endian_to_int
 
-passphrase = b'jiboiamutante'
+passphrase = b'teste'
 secret = little_endian_to_int(hash256(passphrase))
 priv = PrivateKey(secret)
 print(priv.point.address(testnet = True))
